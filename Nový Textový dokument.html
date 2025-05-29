@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MAREKMAX EXPRES s.r.o. – mezinárodní kamionová doprava a logistická řešení na míru.">
+  <meta name="keywords" content="kamionová doprava, logistika, spedice, nákladní doprava, mezinárodní doprava">
+  <meta name="author" content="MAREKMAX EXPRES s.r.o.">
+  <title>MAREKMAX EXPRES s.r.o.</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      position: relative;
+      height: 70vh;
+      overflow: hidden;
+    }
+    header img.header-image {
+      position: absolute;
+      bottom: -6cm;
+      left: 0;
+      width: 100%;
+      height: calc(100% + 6cm);
+      object-fit: cover;
+      object-position: center;
+      z-index: 1;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+    header h1 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      text-align: center;
+      font-size: 4em;
+      color: #fff;
+      z-index: 3;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    }
+    .hero {
+      background: #000;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      padding: 20px 20px 40px 20px;
+    }
+    .hero h2 {
+      font-size: 2.5em;
+      margin: 20px 0 10px 0;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    }
+    .hero p {
+      font-size: 1.5em;
+      max-width: 600px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    }
+    .recruitment {
+      font-size: 1.5em;
+      max-width: 600px;
+      margin-top: 30px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      border-left: 4px solid #fff;
+      padding-left: 10px;
+    }
+    .section p, .section li {
+      font-size: 1.1em;
+      color: #ddd;
+      line-height: 1.6em;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      background-color: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 60px 20px;
+      border-top: 1px solid #333;
+      font-size: 1.5em;
+    }
+    .btn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #ddd;
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+      .hero h2 {
+        font-size: 1.5em;
+      }
+      .hero p, .recruitment {
+        font-size: 1em;
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+      }
+      .section {
+        padding: 40px 15px;
+      }
+      .section h2 {
+        font-size: 1.5em;
+      }
+      .section p, .section li {
+        font-size: 1em;
+      }
+      footer {
+        font-size: 1em;
+        padding: 40px 15px;
+      }
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 10;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    header h1, .btn {
+      animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">O nás</a>
+    <a href="#services">Služby</a>
+    <a href="#contact">Kontakt</a>
+    <a id="lang-switch" href="#" style="margin-left: auto; display: flex; align-items: center; gap: 5px; color: #0ff;">
+      <img src="https://flagcdn.com/gb.svg" alt="EN" style="height: 18px;"> EN
+    </a>
+  </nav>
+  <header>
+    <img class="header-image" src="kamion5.jpg" alt="Kamion v záhlaví">
+    <h1>MAREKMAX EXPRES s.r.o.</h1>
+    <a href="#about" class="btn" style="position: absolute; top: calc(50% + 80px); left: 50%; transform: translateX(-50%); z-index: 3;">Informace o nás</a>
+  </header>
+
+  <div class="hero" style="padding-bottom: 0;">
+    <h2>Spolehlivá kamionová doprava po celé Evropě</h2>
+    <p>Naše firma zajišťuje mezinárodní i vnitrostátní dopravu bezpečně, včas a s maximálním důrazem na kvalitu služeb.</p>
+    <div class="recruitment">
+      <span class="lang-cz">Nabíráme řidiče na MKD s nástupním platem 2 500&nbsp;EUR až 3&nbsp;000&nbsp;EUR, 62–75&nbsp;000&nbsp;Kč. Kontakt: +420&nbsp;777&nbsp;510&nbsp;022</span>
+      <span class="lang-en" style="display: none;">We are hiring truck drivers for international transport with a starting salary of 2,500&nbsp;EUR to 3,000&nbsp;EUR. Contact: +420&nbsp;777&nbsp;510&nbsp;022</span>
+    </div>
+    <a href="#about" class="btn">Zjistit více</a>
+  </div>
+
+  <div class="section" id="about" style="padding-top: 30px;">
+    <h2>O nás</h2>
+    <p>Jsme dynamická a rychle rostoucí rodinná firma působící na českém trhu od roku 2010. Specializujeme se na mezinárodní i vnitrostátní kamionovou dopravu s důrazem na spolehlivost, flexibilitu a osobní přístup. Naším cílem je budovat dlouhodobé vztahy se zákazníky a poskytovat služby nejvyšší kvality v oblasti logistiky a přepravy zboží.</p>
+  </div>
+
+  <div class="section" id="services">
+    <h2>Služby</h2>
+    <ul>
+      <li>Mezinárodní kamionová doprava</li>
+      <li>Logistické řešení na míru</li>
+    </ul>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Kontakt</h2>
+    <p>Telefon: +420 777 510 022<br>
+    Email: <a href="mailto:marekmax.expres@seznam.cz">marekmax.expres@seznam.cz</a><br>
+    Adresa: Hlavní 390, 251 01 Herink</p>
+  </div>
+
+  <footer>
+    &copy; 2025 MAREKMAX EXPRES s.r.o. | Hlavní 390, 251 01 Herink | IČO: 24735965
+  </footer>
+
+<script>
+const langSwitch = document.getElementById('lang-switch');
+let currentLang = 'cz';
+
+langSwitch.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const isCz = currentLang === 'cz';
+
+  document.querySelector('header h1').textContent = isCz ? 'MAREKMAX EXPRESS Ltd.' : 'MAREKMAX EXPRES s.r.o.';
+  document.querySelector('.hero h2').textContent = isCz ? 'Reliable Truck Transport Across Europe' : 'Spolehlivá kamionová doprava po celé Evropě';
+  document.querySelector('.hero p').textContent = isCz ? 'Our company ensures international and domestic transport safely, on time, and with the highest service quality.' : 'Naše firma zajišťuje mezinárodní i vnitrostátní dopravu bezpečně, včas a s maximálním důrazem na kvalitu služeb.';
+  document.querySelector('.hero .btn').textContent = isCz ? 'Learn more' : 'Zjistit více';
+  document.querySelector('#about h2').textContent = isCz ? 'About us' : 'O nás';
+  document.querySelector('#about p').textContent = isCz
+    ? 'We are a dynamic and fast-growing family company operating on the Czech market since 2010. We specialize in international and domestic truck transport with an emphasis on reliability, flexibility, and a personal approach. Our goal is to build long-term relationships with customers and provide top-quality services in logistics and goods transportation.'
+    : 'Jsme dynamická a rychle rostoucí rodinná firma působící na českém trhu od roku 2010. Specializujeme se na mezinárodní i vnitrostátní kamionovou dopravu s důrazem na spolehlivost, flexibilitu a osobní přístup. Naším cílem je budovat dlouhodobé vztahy se zákazníky a poskytovat služby nejvyšší kvality v oblasti logistiky a přepravy zboží.';
+  document.querySelector('#services h2').textContent = isCz ? 'Services' : 'Služby';
+  document.querySelectorAll('#services li')[0].textContent = isCz ? 'International Truck Transport' : 'Mezinárodní kamionová doprava';
+  document.querySelectorAll('#services li')[1].textContent = isCz ? 'Tailor-made Logistic Solutions' : 'Logistické řešení na míru';
+  document.querySelector('#contact h2').textContent = isCz ? 'Contact' : 'Kontakt';
+  document.querySelector('#contact p').innerHTML = isCz
+    ? 'Phone: +420 777 510 022<br>Email: <a href="mailto:marekmax.expres@seznam.cz">marekmax.expres@seznam.cz</a><br>Address: Hlavní 390, 251 01 Herink'
+    : 'Telefon: +420 777 510 022<br>Email: <a href="mailto:marekmax.expres@seznam.cz">marekmax.expres@seznam.cz</a><br>Adresa: Hlavní 390, 251 01 Herink';
+
+  document.querySelector('.recruitment .lang-cz').style.display = isCz ? 'none' : 'inline';
+  document.querySelector('.recruitment .lang-en').style.display = isCz ? 'inline' : 'none';
+
+  currentLang = isCz ? 'en' : 'cz';
+
+  langSwitch.innerHTML = currentLang === 'cz'
+    ? '<img src="https://flagcdn.com/gb.svg" alt="EN" style="height: 18px;"> EN'
+    : '<img src="https://flagcdn.com/cz.svg" alt="CZ" style="height: 18px;"> CZ';
+});
+</script>
+</body>
+</html>
